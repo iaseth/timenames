@@ -19,7 +19,7 @@ export function getTimeName (time: number = 0): string {
 	const hh = hours % 24;
 
 	const ssName = nameJson.animals[ss];
-	const mmName = nameJson.actions[mm % nameJson.actions.length];
+	const mmName = nameJson.actions[mm];
 	const hhName = nameJson.colors[hh];
 
 	const name = `${hhName} ${mmName} ${ssName}`;
