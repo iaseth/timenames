@@ -1,4 +1,6 @@
 import json
+import os
+
 
 
 def get_names_from_file(file_path):
@@ -7,15 +9,17 @@ def get_names_from_file(file_path):
 	names = [line.strip() for line in lines if line.strip()]
 	return names
 
-actions = get_names_from_file("actions.txt")
-animals = get_names_from_file("animals.txt")
-colors = get_names_from_file("colors.txt")
+files = os.listdir()
+txt_files = [f for f in files if f.endswith(".txt")]
+txt_files.sort()
 
-jo = {
-	"actions": actions,
-	"animals": animals,
-	"colors": colors
-}
+jo = {}
+print(f"Looking for names in txt files:")
+for idx, txt_file in enumerate(txt_files):
+	name = txt_file.split(".")[0]
+	names = get_names_from_file(txt_file)
+	jo[name] = names
+	print(f"\t[{idx+1}] Found {len(names)} entries for {name}.")
 
 output_json_path = "../src/names.json"
 with open(output_json_path, "w") as f:
