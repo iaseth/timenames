@@ -1,2 +1,11 @@
 
 names/
+src/
+
+data/
+docs/
+examples/
+tests/
+
+Makefile
+*.rx
