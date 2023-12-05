@@ -17,7 +17,7 @@ jo = {
 	"colors": colors
 }
 
-output_json_path = "../names.json"
+output_json_path = "../src/names.json"
 with open(output_json_path, "w") as f:
 	json.dump(jo, f, indent="\t")
 print(f"Saved: {output_json_path}")

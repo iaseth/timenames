@@ -1,4 +1,4 @@
-import nameJsonModule from '../names.json';
+import nameJsonModule from './names.json';
 
 interface NamesJson {
 	actions: string[],
