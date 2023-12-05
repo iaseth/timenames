@@ -1,0 +1,26 @@
+
+# Timenames
+Timenames provides you with a unique name for each second of the day.
+
+I am using {{ gh.link("iaseth/readmix", "readmix") }} for generating this README.
+You can view the source file [here](https://github.com/iaseth/timenames/blob/master/README.md.rx).
+
+
+## How to use timenames in your project
+Install the {{ "timenames" | NpmLink }} npm package:
+=> npm install timenames
+
+
+## Dependencies
+{{ npm.dependencyTable() }}
+
+
+## Dev dependencies
+{{ npm.devDependencyTable() }}
+
+
+## License
+{{ "LICENSE.md" | File }}
+
+
+{{ giveCredit() }}
