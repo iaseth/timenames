@@ -1,0 +1,50 @@
+
+# vite-react-ts-starter
+This is the template I use to get up and running with a new React App in 2023.
+It was created with `Vite` with the following command:
+=> npm create vite@latest vite-react-ts-starter -- --template react-ts
+
+
+I am using {{ gh.link("iaseth/readmix", "readmix") }} for generating this README.
+You can view the source file [here](https://github.com/iaseth/vite-react-ts-starter/blob/master/README.md.rx).
+
+
+## Table of contents
+{{ tableOfContents(doc) }}
+
+
+## Getting Started
+* Clone the repository and `cd` into it:
+	=> git clone https://github.com/iaseth/vite-react-ts-starter.git
+	=> cd vite-react-ts-starter
+* Delete the `.git` directory and do `git init` for a fresh start:
+	=> rm -r .git
+	=> git init
+* Install all dependencies with the following command:
+	=> npm install
+* Now you can run the dev server with:
+	=> npm run dev
+	This will start running a development server at [http://localhost:5173/](http://localhost:5173/).
+* To build the project:
+	=> npm run build
+	This will build your project into `dist` directory.
+
+
+## Package details
+{{ npm.packageDetails() }}
+
+
+## Dependencies
+{{ npm.dependencyTable() }}
+
+
+## Dev dependencies
+{{ npm.devDependencyTable() }}
+
+
+## License
+{{ "LICENSE.md" | File }}
+
+
+{{ giveCredit() }}
+
