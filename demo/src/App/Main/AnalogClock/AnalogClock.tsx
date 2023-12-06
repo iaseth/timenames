@@ -17,6 +17,18 @@ export default function AnalogClock ({time}: AnalogClockProps) {
 	const m = minutes % 60;
 	const h = hours % 12;
 
+	const updateSize = () => {
+		const wh = window.innerHeight;
+		const ww = window.innerWidth;
+		const min = Math.min(wh, ww);
+		setSize(min);
+	};
+	React.useEffect(() => {
+		updateSize();
+		window.addEventListener('resize', updateSize);
+		return () => window.removeEventListener('resize', updateSize);
+	}, []);
+
 	const style = {
 		height: `${size}px`,
 		width: `${size}px`
@@ -38,7 +50,7 @@ export default function AnalogClock ({time}: AnalogClockProps) {
 		<section className="bg-white relative p-4">
 			<section style={style} className="bg-zinc-100 w-full h-full rounded-full">
 				<section className="absolute top-1/2 left-1/2 w-4 h-4 bg-red-500 -translate-x-1/2 -translate-y-1/2 rounded-full">
-					<div style={secondHandStyle} className="absolute bottom-0 w-2 h-40 bg-zinc-500 rounded"></div>
+					<div style={hourHandStyle} className="absolute top-0 w-2 h-40 bg-zinc-500 rounded"></div>
 					<div style={minuteHandStyle} className="absolute top-0 left-0 w-2 h-40 bg-blue-500 rounded"></div>
 					<div style={secondHandStyle} className="absolute top-0 left-0 w-2 h-40 bg-red-500 rounded"></div>
 				</section>

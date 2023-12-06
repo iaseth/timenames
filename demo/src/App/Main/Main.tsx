@@ -12,6 +12,9 @@ interface MainProps {
 
 export default function Main ({}: MainProps) {
 	const [time, setTime] = React.useState(Date.now());
+	const offsetMinutes = new Date().getTimezoneOffset();
+	const offsetMs = offsetMinutes * 60 * 1000;
+	const localTime = time + offsetMs;
 
 	const updateTime = () => setTime(Date.now());
 	React.useEffect(() => {
@@ -22,9 +25,9 @@ export default function Main ({}: MainProps) {
 	return (
 		<main className="min-h-screen px-2 py-4 bg-zinc-100 flex">
 			<section className="m-auto text-center rounded shadow overflow-hidden">
-				<Timename time={time} />
-				<AnalogClock time={time} />
-				<DigitalClock time={time} />
+				<Timename time={localTime} />
+				<AnalogClock time={localTime} />
+				<DigitalClock time={localTime} />
 			</section>
 		</main>
 	);
