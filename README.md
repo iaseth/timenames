@@ -6,6 +6,9 @@ I am using [`readmix`](https://github.com/iaseth/readmix) for generating this RE
 You can view the source file [here](https://github.com/iaseth/timenames/blob/master/README.md.rx).
 
 
+![Timenames Demo](https://github.com/iaseth/timenames/blob/master/res/one-minute-demo.gif)
+
+
 ## How to use timenames in your project
 Install the [`timenames`](https://www.npmjs.com/package/timenames) npm package:
 ```
