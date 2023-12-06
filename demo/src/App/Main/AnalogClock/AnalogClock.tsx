@@ -1,4 +1,5 @@
 import React from "react";
+import ClockHand from "./ClockHand";
 
 
 
@@ -49,10 +50,12 @@ export default function AnalogClock ({time}: AnalogClockProps) {
 	return (
 		<section className="bg-white relative p-4">
 			<section style={style} className="bg-zinc-100 w-full h-full rounded-full">
-				<section className="absolute top-1/2 left-1/2 w-4 h-4 bg-red-500 -translate-x-1/2 -translate-y-1/2 rounded-full">
-					<div style={hourHandStyle} className="absolute top-0 w-2 h-40 bg-zinc-500 rounded"></div>
-					<div style={minuteHandStyle} className="absolute top-0 left-0 w-2 h-40 bg-blue-500 rounded"></div>
-					<div style={secondHandStyle} className="absolute top-0 left-0 w-2 h-40 bg-red-500 rounded"></div>
+				<section className="absolute top-1/2 left-1/2 w-0 h-0">
+					<ClockHand deg={h*30} color="#222" className="rounded-t-full" width={20} length={150} />
+					<ClockHand deg={m*6} color="blue" className="rounded-t-full" width={15} length={220} />
+					<ClockHand deg={s*6} color="red" className="rounded-t-full" width={10} length={270} />
+
+					<div className="w-10 h-10 bg-zinc-900 rounded-full shadow -translate-x-1/2 -translate-y-1/2"></div>
 				</section>
 			</section>
 		</section>
