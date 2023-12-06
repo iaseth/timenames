@@ -8,4 +8,4 @@ examples/
 tests/
 
 Makefile
-*.rx
+*.md.rx

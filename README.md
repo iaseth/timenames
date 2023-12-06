@@ -12,6 +12,16 @@ Install the [`timenames`](https://www.npmjs.com/package/timenames) npm package:
 npm install timenames
 ```
 
+Import the `getTimeName()` function:
+```
+import { getTimeName } from 'timenames';
+```
+
+Call the `getTimeName()` function with the current time to get a `timename`:
+```
+const timename = getTimeName(Date.now());
+```
+
 
 ## Dependencies
 This package has no dependencies.
