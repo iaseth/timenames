@@ -1,9 +1,18 @@
 
 # Timenames
 Timenames provides you with a unique name for each second of the day.
+You can see a demo [here](https://timenames.redpapr.com/).
 
 I am using {{ gh.link("iaseth/readmix", "readmix") }} for generating this README.
 You can view the source file [here](https://github.com/iaseth/timenames/blob/master/README.md.rx).
+
+
+## How it started
+I was working of a [sound recorder app](https://github.com/iaseth/rex)
+that gave a default filename to each recording based on the current time.
+I extracted the naming logic into a separate npm package called
+[timenames](https://www.npmjs.com/package/timenames) and added a
+[demo react app](https://timenames.redpapr.com/) for previewing.
 
 
 ![Timenames Demo](res/one-minute-demo.gif)
