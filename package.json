@@ -1,6 +1,6 @@
 {
   "name": "timenames",
-  "version": "0.8.0",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "iaseth",
-  "homepage": "https://github.com/iaseth/timenames",
+  "homepage": "https://timenames.redpapr.com/",
   "repository": "iaseth/timenames",
   "license": "MIT"
 }
