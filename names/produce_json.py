@@ -7,6 +7,7 @@ def get_names_from_file(file_path):
 	contents = open(file_path).read().strip()
 	lines = contents.split("\n")
 	names = [line.strip() for line in lines if line.strip()]
+	names.sort()
 	return names
 
 files = os.listdir()
