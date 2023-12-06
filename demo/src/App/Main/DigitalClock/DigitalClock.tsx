@@ -19,8 +19,8 @@ export default function DigitalClock ({time}: DigitalClockProps) {
 	const hh = h < 10 ? `0${h}` : `${h}`;
 
 	return (
-		<section className="px-4 py-6 bg-zinc-900 text-white">
-			<h2 className="font-mono">{hh} : {mm} : {ss}</h2>
+		<section className="h-20 p-2 bg-zinc-950 text-white flex">
+			<h2 className="m-auto font-mono">{hh} : {mm} : {ss}</h2>
 		</section>
 	);
 }

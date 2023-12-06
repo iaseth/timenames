@@ -12,10 +12,10 @@ interface DashProps {
 
 export default function Dash ({
 	deg, radius,
-	height=16,
-	width=4,
+	height=12,
+	width=2,
 	className="",
-	color="#111"
+	color="#222"
 }: DashProps) {
 	const radians = deg * Math.PI / 180;
 	const hyp = radius;

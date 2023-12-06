@@ -12,7 +12,7 @@ interface DotProps {
 
 export default function Dot ({
 	deg, radius,
-	size=10,
+	size=8,
 	padding=20,
 	className="",
 	color="#111"
