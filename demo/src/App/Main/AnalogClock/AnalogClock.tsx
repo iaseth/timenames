@@ -1,5 +1,6 @@
 import React from "react";
 import ClockHand from "./ClockHand";
+import Dot from "./Dot";
 
 
 
@@ -9,6 +10,7 @@ interface AnalogClockProps {
 
 export default function AnalogClock ({time}: AnalogClockProps) {
 	const [size, setSize] = React.useState(400);
+	const radius = Math.floor(size / 2);
 
 	const seconds = Math.floor(time / 1000);
 	const minutes = Math.floor(seconds / 60);
@@ -35,17 +37,7 @@ export default function AnalogClock ({time}: AnalogClockProps) {
 		width: `${size}px`
 	};
 
-	const hourHandStyle = {
-		transform: `rotateZ(${h*30}deg)`
-	};
-
-	const minuteHandStyle = {
-		transform: `rotateZ(${m*6}deg)`
-	};
-
-	const secondHandStyle = {
-		transform: `rotateZ(${s*6}deg)`
-	};
+	const sixty = [...Array(60).keys()];
 
 	return (
 		<section className="bg-white relative p-4">
@@ -56,6 +48,8 @@ export default function AnalogClock ({time}: AnalogClockProps) {
 					<ClockHand deg={s*6} color="red" className="rounded-t-full" width={10} length={270} />
 
 					<div className="w-10 h-10 bg-zinc-900 rounded-full shadow -translate-x-1/2 -translate-y-1/2"></div>
+
+					{sixty.map(idx => <Dot key={idx} deg={idx * 6} radius={radius} size={(idx % 5 === 0) ? 16 : 8} />)}
 				</section>
 			</section>
 		</section>
