@@ -6,7 +6,7 @@ I am using [`readmix`](https://github.com/iaseth/readmix) for generating this RE
 You can view the source file [here](https://github.com/iaseth/timenames/blob/master/README.md.rx).
 
 
-![Timenames Demo](https://github.com/iaseth/timenames/blob/master/res/one-minute-demo.gif)
+![Timenames Demo](https://github.com/iaseth/timenames/raw/master/res/one-minute-demo.gif)
 
 
 ## How to use timenames in your project
