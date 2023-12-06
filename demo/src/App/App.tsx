@@ -8,7 +8,7 @@ import Main from './Main/Main';
 export default function App () {
 
 	return (
-		<div className="min-h-screen flex flex-col">
+		<div className="">
 			<Header />
 			<Main />
 			<Footer />

@@ -7,8 +7,8 @@ interface HeaderProps {
 
 export default function Header ({}: HeaderProps) {
 	return (
-		<header className="bg-blue-500 text-white px-2 py-5 text-center">
-			<h2>Start</h2>
+		<header className="bg-zinc-900 text-white px-2 py-5 text-center" hidden>
+			<h4>Timenames</h4>
 		</header>
 	);
 }
