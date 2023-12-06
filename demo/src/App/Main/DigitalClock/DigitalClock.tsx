@@ -19,7 +19,7 @@ export default function DigitalClock ({time}: DigitalClockProps) {
 	const hh = h < 10 ? `0${h}` : `${h}`;
 
 	return (
-		<section>
+		<section className="px-4 py-6 bg-zinc-900 text-white">
 			<h2 className="font-mono">{hh} : {mm} : {ss}</h2>
 		</section>
 	);
