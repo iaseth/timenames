@@ -1,6 +1,9 @@
 import React from "react";
-import Clock from "./Clock/Clock";
+
 import { getTimeName } from "timenames";
+
+import AnalogClock from "./AnalogClock/AnalogClock";
+import DigitalClock from "./DigitalClock/DigitalClock";
 
 
 
@@ -21,8 +24,11 @@ export default function Main ({}: MainProps) {
 	return (
 		<main className="min-h-screen px-2 py-4 bg-zinc-100 flex">
 			<section className="m-auto text-center">
-				<Clock time={time} />
-				<h4>{timename}</h4>
+				<AnalogClock time={time} />
+				<DigitalClock time={time} />
+				<footer className="px-4 py-6">
+					<h4>{timename}</h4>
+				</footer>
 			</section>
 		</main>
 	);
