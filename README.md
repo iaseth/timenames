@@ -29,9 +29,15 @@ Import the `getTimeName()` function:
 import { getTimeName } from "timenames";
 ```
 
-Call the `getTimeName()` function with the current time to get a `timename`:
+Call the `getTimeName()` function to get a `timename`:
 ```
-const timename = getTimeName(Date.now());
+const timename = getTimeName();
+```
+
+You can optionally pass a time prop to get a `timename` for a specific time:
+```
+const t = Date.now();
+const timename = getTimeName(t);
 ```
 
 
