@@ -8,7 +8,7 @@ You can view the source file [here](https://github.com/iaseth/timenames/blob/mas
 
 
 ## How it started
-I was working of a [sound recorder app](https://github.com/iaseth/rex)
+I was working on a [sound recorder app](https://github.com/iaseth/rex)
 that gave a default filename to each recording based on the current time.
 I extracted the naming logic into a separate npm package called
 [timenames](https://www.npmjs.com/package/timenames) and added a
@@ -26,7 +26,7 @@ npm install timenames
 
 Import the `getTimeName()` function:
 ```
-import { getTimeName } from 'timenames';
+import { getTimeName } from "timenames";
 ```
 
 Call the `getTimeName()` function with the current time to get a `timename`:
