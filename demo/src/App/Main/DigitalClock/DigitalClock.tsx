@@ -1,3 +1,4 @@
+import { RedIcon } from "redicons";
 
 
 
@@ -20,7 +21,19 @@ export default function DigitalClock ({time}: DigitalClockProps) {
 
 	return (
 		<section className="h-20 p-2 bg-zinc-950 text-white flex">
-			<h2 className="m-auto font-mono">{hh} : {mm} : {ss}</h2>
+			<h2 className="m-auto font-mono flex">
+				<div className="px-2">
+					<RedIcon name="clock" className="text-blue-500" size={24} />
+				</div>
+
+				<div>
+					<span>{hh}</span>
+					<span>:</span>
+					<span>{mm}</span>
+					<span>:</span>
+					<span>{ss}</span>
+				</div>
+			</h2>
 		</section>
 	);
 }
